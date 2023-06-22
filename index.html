@@ -309,11 +309,14 @@
                                 <td><input type="text" name="lastName" id="lastName"></td>
                             </tr>
                             <tr>
-                                <td><label for="email">Email</label></td>
-                                <td><input type="email" name="email" id="email"></td>
+                                <td><label for="emailAddress">Email</label></td>
+                                <td><input type="emailAddress" name="emailAddress" id="emailAddress"></td>
                             </tr>
                         </table>
                     </fieldset>
+
+                    <input type="button" class="button" name="testForm" onclick="fillTestResults();"/>
+                    <p id="testResults">Test Results Appear Here</p>
 
                     <section>
                         Dropdown Menu:
@@ -350,6 +353,16 @@
                 <!--Select Tag = Option-->
                 <!--Text Area Tag-->
                 <!--Add label tag prior to the input field-->
+
+                <script>
+                    function fillTestResults() {
+                        var firstName = document.getElementById('firstName').value;
+                        var lastName = document.getElementById('lastName').value;
+                        var emailAddress = document.getElementById('emailAddress').value;
+
+                        testResults.innerHTML = firstName + " " + lastName + " " + emailAddress;
+                    }
+                </script>
 
             </div>
 
