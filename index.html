@@ -1,9 +1,454 @@
-<html>
- 
-<body>
-  <h1>YOUR NAME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
- 
-</html>
+<!DOCTYPE html>
+<!-- The <!DOCTYPE html> declaration is not an HTML tag. It is an "information" to the browser about what document type to expect. https://www.w3schools.com/tags/tag_doctype.asp -->
+
+<html lang="en-US">
+    <!-- The <html> element represents the root (top-level element or root element) of an HTML document. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html -->
+
+    <!--IP Address: http://127.0.0.1:3000/Main.html -->
+
+    <head>
+        <!-- The <head> element contains machine-readable information (metadata) about the document. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head -->
+
+        <meta charset="utf-8">
+        <!-- The <meta> tag always go inside the <head> element, and is typically used to specify character set, page description, keywords, author of the document, and viewport settings. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta -->
+        <!-- The charset attribute specifies the character encoding for the HTML document. Default for HTML5 is utf-8. -->
+
+        <meta name="keywords" content="HTML, CSS, Example">
+
+        <meta name="description" content="HTML/CSS Example">
+
+        <meta name="author" content="Emanuel Garcia">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The width=device-width will make the page match the screen’s width in device-independent pixels, allowing its content to reflow to match different screen sizes. The initial-scale=1 is mostly needed to work around the orientation change bug from Safari for iOS < 9. https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+
+        <title>Title Example</title>
+        <!--The <title> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.
+        The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide
+        the order when listing pages in search results. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title -->
+
+        <link rel="stylesheet" href="./style.css">
+        <!-- The <link> tag defines the relationship between the current document and an external resource. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link -->
+
+        <script src="./Scripts/main.js"></script>
+        <!-- The <script> element is used to embed executable code or data or link to executable external resources. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script -->
+
+    </head>
+
+    <body onload="alert('This screen is ' + screen.width + 'x' + screen.height)";>
+    <!-- The <body> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body -->
+
+        <header>
+        <!-- The <header> element represents a container for introductory content or a set of navigational links. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header -->
+
+            <nav>
+            <!-- The <nav> tag defines a set of navigation links. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav -->
+            
+                <ul>
+                <!-- The <ul> element represents an unordered list of items. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul -->
+
+                    <li><a href="#definitions">Definitions</a></li>
+                    <li><a href="#textStyling">Text Styling</a></li>
+                    <li><a href="#listExample">List Examples</a></li>
+                    <li><a href="#tableExample">Table Example</a></li>
+                    <li><a href="#detailsExample">Details Example</a></li>
+                    <li><a href="#formExample">Form Example</a></li>
+                    <li><a href="#mediaExample">Media Example</a></li>
+                    <!--The <li> element is used to represent an item in a list. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li -->
+                    <!-- The <a> tag defines a hyperlink, which is used to link from one page to another. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a -->
+
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+        <!-- The <main> element represents the dominant content of the <body> of a document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main -->
+            
+            <section id="bannerContainer"><h1 id="banner">Welcome to your list of HTML, CSS, and JS Examples!</h1></section>            
+
+            <div id="syntax">
+            <!--The <div> element is the generic container for flow content. Browsers always place a line break before and after the <div> element. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div -->
+
+                <section id="definitions">
+                <!--The <section> HTML element represents a generic standalone section of a document. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section -->
+
+                    <h2>Definitions</h2>
+                    <strong>HTML</strong> stands for HyperText Markup Language. <br>
+                    <strong>HyperText</strong> is text displayed on a computer or device that provides access to other text through links, also known as hyperlinks. <br>
+                    <strong>Markup Language</strong> is a computer language that defines the structure and presentation of raw text. <br>
+                    <strong>Articles</strong> <code>&lt;article&gt;</code> specifies independent, self-contained content such as forum, blog, or news story posts.  <br> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article -->
+                    <strong>Paragraphs</strong> <code>&lt;p&gt;</code> contain a block of plain text. <br> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p -->
+                    <strong>Spans</strong> <code>&lt;span&gt;</code> contain short pieces of text or even individual words. <br> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span -->
+                    <strong>Short Quotations</strong> <code>&lt;q&gt;</code> contain shorter quotes in a text. It will be surrounded by quotation marks. <br> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q -->
+                    <strong>Long Quotations</strong> <code>&lt;blockquote&gt;</code> contain longer quotes in a text. It will be surrounded by quotation marks. <br> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote -->
+                    <strong>Asides</strong> <code>&lt;aside&gt;</code> contain content aside from the content it is placed in and should be indirectly related to the surrounding content such as a sidebar. <br> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside -->
+                    <strong>Abbreviations</strong> <code>&lt;abbr&gt;</code> reprepresent abbreviations or acronyms. <br> <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr -->
+
+                </section>
+
+                <section id="entities">
+                    <h2>Entities</h2>
+                    Less than symbol (&lt;) = <strong>&amp;lt;</strong> <br>
+                    Greater than symbol (&gt;) = <strong>&amp;gt;</strong> <br>
+                    Ampersand (&) = <strong>&amp;amp;</strong> <br>
+                    Double quotation (") = <strong>&amp;quot;</strong> <br>
+                    Copyright (&copy;) = <strong>&amp;copy;</strong><br>
+                    Nonbreaking Space ( &nbsp;)= <strong>&amp;nbsp;</strong>
+                </section>
+
+                <section id="selectors">
+                    <h2>CSS Selectors, Chaining, and Descendant Combinator</h2>
+                    Universal Selector example: * {color: <span>black</span>;} <br>
+                    Type Selector example: type {color: <span style="color:maroon">maroon</span>;} <br>
+                    Class Selector example = .class {color: <span style="color:red">red</span>;} <br>
+                    ID Selector example = #id {color: <span style="color:deeppink">deeppink</span>;} <br>
+                    Multiple Selector example = type, .class, #id {color: <span style="color:purple">purple</span>;} <br>
+                    Style Selector example = strong {color: <span style="color:indigo">indigo</span>;} <br>
+                    Attribute Selector example = a[href*='example'] {color: <span style="color:blue">blue</span>;} <br>
+                    Pseudo-Class Selector example = a:hover {color: <span style="color:cyan">cyan</span>;} <br>
+                    Chaining example = type.class {color: <span style="color:lightgreen">lightgreen</span>;} <br>
+                    Descendant Combinator example = .class type {color: <span style="color:green">green</span>;} <br>
+                    Another Example for tables = .class li {color: <span style="color:greenyellow">greenyellow</span>;}
+                </section>
+
+                <section id="positioning">
+                    <h2>CSS Positioning</h2>
+                    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/position -->
+
+                    <table>
+                        <tr>
+                            <th>Static (Default)</th>
+                            <td>
+                                <ul>
+                                    <li>Positions element according to normal flow of document.</li>
+                                </ul>
+                            </td>
+                            <td><img src="./Media/Static.jpg" alt=""></td>
+                        </tr>
+                        <tr>
+                            <th>Relative</th>
+                            <td>
+                                <ul>
+                                    <li>Positions element relative to it's default static position.</li>
+                                    <li>Top, Right, Bottom, Left</li>
+                                </ul>
+                            </td>
+                            <td><img src="./Media/Relative.jpg" alt=""></td>
+                        </tr>
+                        <tr>
+                            <th>Absolute</th>
+                            <td>
+                                <ul>
+                                    <li>Positions element relative to it's closest positioned partent.</li>
+                                    <li>Ignored by other elements</li>
+                                    <li>Scrolls with document</li>
+                                    <li>Top, Right, Bottom, Left</li>
+                                </ul>
+                            </td>
+                            <td><img src="./Media/Absolute.jpg" alt=""></td>
+                        </tr>
+                        <tr>
+                            <th>Fixed</th>
+                            <td>
+                                <ul>
+                                    <li>Positions element relative to the viewport.</li>
+                                    <li>Ignored by other elements</li>
+                                    <li>Does not scroll with document</li>
+                                    <li>Top, Right, Bottom, Left</li>
+                                </ul>
+                            </td>
+                            <td><img src="./Media/Fixed.gif" alt=""></td>
+                        </tr>
+                        <tr>
+                            <th>Sticky</th>
+                            <td>
+                                <ul>
+                                    <li>Positions element relative to nearest scrolling ancestor and containing block.</li>
+                                    <li>Ignored by other elements</li>
+                                    <li>Does not scroll with document until offset properties are met</li>
+                                    <li>Creates 'stacking context'</li>
+                                    <li>Top, Right, Bottom, Left</li>
+                                </ul>
+                            </td>
+                            <td><img src="./Media/Sticky.gif" alt=""></td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+
+            <div id="styling">
+                <section id="backgroundStyling">
+                    <h2>CSS Background Styling</h2>
+                    background-color<br>
+                    background-image <br>
+                </section>
+
+                <section id="textStyling">
+                    <h2>CSS Text Styling</h2>
+                    color <br>
+                    font-family <br>
+                    font-weight <br>
+                    font-size <br>
+                    opacity <br>
+                    text-transform <br>
+                    line-height <br>
+                    display <br>
+                    text-align <br>
+                </section>
+            </div>
+
+            <div id="listExample">
+
+                <h2>Ordered/Unordered List Examples</h2>
+                <section id="orderedList">
+
+                    <h3>Ordered List</h3>
+                    <ol type="1" start="3" reversed>
+                        <li>list Item #1</li>
+                        <li>list Item #2</li>
+                        <li>list Item #3</li>
+                    </ol>
+                </section>
+
+                <section id="unorderedList">
+                    <h3>Unordered List</h3>
+                    <ul>
+                        <li>list Item #1</li>
+                        <li>list Item #2</li>
+                        <li>list Item #3</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div id="tableExample">
+                
+                <h2>Table Example</h2>
+                <table>
+                <!-- The <table> tag defines an HTML table. -->
+    
+                    <caption>Tabel Caption Example</caption>
+                    <!-- The <caption> tag defines a table caption and must be inserted immediatly after the <table> tag. Center-aligned above the table by default. -->
+    
+                    <thead>
+                    <!-- The <thead> tag is used to group header content in an HTML table. -->
+    
+                        <tr>
+                        <!-- The <tr> tag defines a row in an HTML table. -->
+    
+                            <th scope="col">Header Row</th>
+                            <th scope="col">Header 1</th>
+                            <th scope="col">Header 2</th>
+                            <th scope="col">Header 3</th>
+                            <!-- The <th> tag defines a header cell in an HTML table. Bold and centered by default. -->
+                            <!-- the <scope> attribute specifies whether a header cell is a header for a column, row, or group of columns or rows. -->
+    
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                    <!-- The <tbody> tag is used to group the body content in an HTML table. -->
+    
+                        <tr scope="row">
+                            <th>Body Row 1</th>
+                            <td>Body Cell 1</td>
+                            <td>Body Cell 2</td>
+                            <td rowspan="2">Body Cell 3 Spans 2 Rows</td>
+                            <!-- The <td> tag defines a standard data cell in an HTML table. Regular and left-aligned by default. -->
+                            <!-- The <rowspan> attribute sets the number of rows a cell should span. -->
+    
+                        </tr>
+                        
+                        <tr>
+                            <th>Body Row 2</th>
+                            <td colspan="2">&lt;-----Column Span-----&gt;</td>
+                            <!-- The <colspan> attribute sets the number of columns a cell should span. -->
+                                
+                        </tr>
+                    </tbody>
+    
+                    <tfoot>
+                    <!-- The <tfoot> tag is used to group footer content in an HTML table. -->
+    
+                        <tr scope="row">
+                            <th>Body Row 3</th>
+                            <td>Footer 1</td>
+                            <td>Footer 2</td>
+                            <td>Footer 3</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div id="detailsExample">
+
+                <h1>Details & Summary Example</h1>
+                <details>
+                <!-- The <details> tag specifies additional details that the user can open and close on demand. -->
+    
+                    <summary>Click Here</summary>
+                    <summary>Option 1</summary>
+                    <summary>Option 2</summary>
+                    <summary>Option 3</summary>
+                </details>
+            </div>
+
+            <div id="formExample">
+
+                <h1>Form Example</h1>
+                <form action="Link Example.html" method="post" oninput="fn.value = firstName.value + ' ' + lastName.value">
+                    <fieldset>
+                        <legend>Fieldset Example</legend>
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName"> <br>
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName"> <br>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"> <br>
+                    </fieldset>
+
+                    <section>
+                        Dropdown Menu:
+                        <select title="dropDownMenu" id="dropDownMenu">
+                            <option value="option1" selected>Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                            <optgroup label="Group 1"></optgroup>
+                                <option value="G1O1">G1O1</option>
+                                <option value="G1O2">G1O2</option>
+                        </select>
+                    </section>
+
+                    <section>
+                        <p><strong>Datalist Example</strong></p>
+                        <input type="text" list="datalist" title="datalist">
+                        <datalist id="datalist">
+                            <option value="Option 1"></option>
+                            <option value="Option 2"></option>
+                            <option value="Option 3"></option>
+                        </datalist>
+                    </section>
+
+                    <section>
+                        <p><strong>Text Area Example:</strong></p>
+                        <textarea title="textarea" id="textarea"  cols="50" rows="5" maxlength="255"></textarea>
+                    </section>
+
+                    <button name="showimage" type="button" onclick="">Button</button>
+                    <input type="submit" name="submitform" value="Input Button" />
+                    <output name="fn"></output>
+                </form>
+                <!--Input Tag = Text, Email, Checkbox, Submit, Button, and List-->
+                <!--Select Tag = Option-->
+                <!--Text Area Tag-->
+                <!--Add label tag prior to the input field-->
+
+            </div>
+
+            <div id="mediaExamples">
+
+                <h1>Media Example</h1>
+                <figure>
+                <!-- The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.-->
+
+                    <img src="/Media/dogimage.webp" alt="Image Example" /> <br>
+                    <!-- The <img> tag is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web
+                    pages. The <img> tag creates a holding space for the referenced image. https://www.w3schools.com/tags/tag_img.asp -->
+
+                    <figcaption>Example of an image</figcaption>
+                    <!-- The <figcaption> tag defines a caption for a <figure> element. -->
+
+                    <br> <br>
+                
+                    <audio  controls>
+                        <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3" />
+                    </audio>
+                    <!-- The <audio> tag is used to embed sound content in a document, such as music or other audio streams. The <audio> tag contains one or more
+                    <source> tags with different audio sources. The browser will choose the first source it supports. The text between the <audio> and </audio>
+                    tags will only be displayed in browsers that do not support the <audio> element. There are three supported audio formats in HTML: MP3, WAV, 
+                    and OGG. https://www.w3schools.com/tags/tag_audio.asp -->
+
+                    <figcaption>Example of audio</figcaption>
+
+                    <br> <br>
+
+                    <video width="320" height="240" controls>
+                        <source src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" type="video/mp4" />
+                    </video>
+                    <!-- The <video> tag is used to embed video content in a document, such as a movie clip or other video streams. The <video> tag contains one
+                    or more <source> tags with different video sources. The browser will choose the first source it supports.The text between the <video> and
+                    </video> tags will only be displayed in browsers that do not support the <video> element.There are three supported video formats in HTML: 
+                    MP4, WebM, and OGG. https://www.w3schools.com/tags/tag_video.asp -->
+
+                    <figcaption>Example of video</figcaption>
+
+                    <br> <br>
+
+                    <img src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif" alt="gif of a dog"/>
+
+                    <figcaption>Example of gif</figcaption>
+
+                    <iframe src="https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg" title="iframe-example" width="480" height="360"></iframe>
+                    <!-- The <iframe> tag specifies an inline frame. An inline frame is used to embed another document within the current HTML document.
+                    https://www.w3schools.com/tags/tag_iframe.asp -->
+
+                    <figcaption>Example of iFrame</figcaption>
+
+                </figure>
+            </div>
+
+            <div id="javascriptExample">
+                <section id="commentsAndDebuggerExamples">
+                    <script>
+                        // Single Line Comment
+                        /* Multiline Comment */
+                        // debugger;
+                    </script>
+                </section>
+
+                <section id="itemQuantityExample">
+                    <input type="text" value="1" id="manual-quantity" /> <br>
+                    <button id="add" onclick="javascript: document.getElementById('manual-quantity').value++;">+</button>
+                    <button id="subtract" onclick="javascript: document.getElementById('manual-quantity').value--;">-</button>
+                    <button id="clear" onclick="javascript: document.getElementById('manual-quantity').value = null;">Clear</button>
+                    <button id="addFive" onclick="javascript: divProblem(document.getElementById('manual-quantity').value);">Add 5</button>
+                    <input type="button" class="buttons" value="New Window" onclick="openNewWindow();" />
+                </section>
+                
+                <section id="classExample">
+                    <script>
+                        var classAnswer = new classExample('Do you', 'know the', 'Muffin Man?');
+                        // Call classAnswer.Paramter1
+
+                        let dateExample = new Date('September 19, 1986 7:12 PM');
+                        let todayDate = new Date();
+                    </script>
+                </section>
+                    
+                <!-- Script Example-->
+                <script lang="javascript">
+                    alert('This part of the page is under construction!')
+                </script>
+                <noscript>Your browser does not support JavaScript!</noscript>                
+            </div>
+        </main>
+
+        <footer>
+        <!-- The <footer> element typically contains information about the author of the section, copyright data or links to related documents. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer -->
+        
+            <nav>
+                <ul>
+                    <li><a href="#definitions">Definitions</a></li>
+                    <li><a href="#textStyling">Text Styling</a></li>
+                    <li><a href="#listExample">List Examples</a></li>
+                    <li><a href="#tableExample">Table Example</a></li>
+                    <li><a href="#detailsExample">Details Example</a></li>
+                    <li><a href="#formExample">Form Example</a></li>
+                    <li><a href="#mediaExample">Media Example</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <address></address>
+            </section>
+        </footer>
+    </body>
