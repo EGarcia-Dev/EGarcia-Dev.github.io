@@ -10,3 +10,6 @@ function fillTestResults() {
     testResults.innerHTML = firstName + " " + lastName + " " + emailAddress;
 }
 
+function clearTestResults() {
+    testResults.innerHTML = "Test Results Appear Here";
+}
