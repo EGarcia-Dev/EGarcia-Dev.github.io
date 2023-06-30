@@ -40,14 +40,6 @@ main {
   top: 50px;
 }
 
-h1 {
-  text-align: center;
-}
-
-img {
-  height: 300px;
-}
-
 #banner-container {
   width: 100%;
   position: relative;
@@ -92,36 +84,44 @@ img {
   margin: auto;
 }
 
+#syntax {
+  position: static;
+}
+
+#text-styling {
+  position: static;
+}
+
+#list-examples {
+  position: static;
+}
+
+#table-example {
+  position: static;
+}
+
+#details-example {
+  position: static;
+}
+
+#form-example {
+  position: static;
+}
+
+#media-example {
+  position: static;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  height: 300px;
+}
+
 table, th, td {
   border: 1px solid black;
   font-family: Arial, sans-serif;
   
-}
-
-#definitions {
-  
-}
-
-#text-styling {
-
-}
-
-#list-examples {
-
-}
-
-#table-example {
-
-}
-
-#details-example {
-
-}
-
-#form-example {
-
-}
-
-#media-example {
-
 }
